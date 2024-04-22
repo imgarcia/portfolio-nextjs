@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "fast": "next dev --turbo",
+    "turbo": "next dev --experimental-turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
