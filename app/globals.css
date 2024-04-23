@@ -6,7 +6,7 @@
   --portfolio-blue: #253439;
   --portfolio-brown: #c99d72;
   --background-color: #253439;
-  --text: #c99d72;
+  --text: #dcbfa3;
 }
 
 html {
@@ -41,7 +41,22 @@ body {
     @apply bg-gradient-to-t from-[#c99d72] to-[#a67240] bg-clip-text text-transparent;
   }
 
+  .text-gradient-light {
+    @apply bg-gradient-to-t from-[#dcbfa3] to-[#c99d72] bg-clip-text text-transparent;
+  }
+
   .section-title {
-    @apply text-2xl text-center text-gradient;
+    @apply text-3xl text-center text-gradient-light;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply block my-8 h-2 border-t-2 w-[10%] border-[#a67240] m-auto;
+  }
+}
+
+@layer components {
+  .svg {
+    @apply w-[50px] h-[50px];
   }
 }
