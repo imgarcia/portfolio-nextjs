@@ -9,13 +9,13 @@ const Contact = () => {
       <h1 className="section-title">Get In Touch</h1>
 
       <p className="text-center text-xl">
-        I'm currently looking for any new career opportunities or freelance
-        projects to take on.{' '}
+        I'm currently looking for new career opportunities or freelance projects
+        to take on.{' '}
       </p>
 
       <p className="text-center text-xl">
         If you think I would be a great fit to collaborate it, shoot me a
-        message via email or LinkedIn.
+        message via email or on LinkedIn.
       </p>
 
       <div className="flex-center gap-10">
@@ -73,9 +73,9 @@ const Contact = () => {
             role="img"
             viewBox="0 0 24 24"
             fill="none"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="svg svg-linkedin stroke-brown-5 group-hover:stroke-brown-1"
           >
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>

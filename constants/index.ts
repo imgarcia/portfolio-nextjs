@@ -27,3 +27,73 @@ export const skills = [
   'Agile',
   'Figma',
 ]
+
+export const experiences = [
+  {
+    startDate: 'Aug 2021',
+    endDate: 'Dec 2023',
+    companyName: 'Extend, Inc',
+    jobTitle: 'Senior Software Engineer',
+    description:
+      'Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties.',
+    techStack: [
+      'React',
+      'TypeScript',
+      'Redux',
+      'React Query',
+      'Unit Testing',
+      'Cypress',
+      'Restful API',
+      'Postman',
+      'Git',
+      'Figma',
+      'AWS',
+      'Email Templates',
+    ],
+  },
+  {
+    startDate: 'Oct 2017',
+    endDate: 'Aug 2021',
+    companyName: 'Oracle + NetSuite',
+    jobTitle: 'Senior Web Developer',
+    description:
+      'Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties.',
+    techStack: [
+      'React',
+      'JavaScript',
+      'D3.js',
+      'SuiteScript',
+      'NetSuite API',
+      'Cypress',
+      'Sass',
+      'Git',
+    ],
+  },
+  {
+    startDate: 'Feb 2015',
+    endDate: 'Oct 2017',
+    companyName: 'NetSuite, Inc',
+    jobTitle: 'Web Developer & Consultant',
+    description:
+      'Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties.',
+    techStack: ['SuiteCommerce', 'Backbone.js', 'JavaScript', 'Less', 'Git'],
+  },
+  {
+    startDate: 'Sept 2013',
+    endDate: 'Feb 2015',
+    companyName: 'The New Office, Inc',
+    jobTitle: 'Web Developer',
+    description:
+      'Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties. Add a small description of your job duties.',
+    techStack: [
+      'SuiteCommerce',
+      'Backbone.js',
+      'JavaScript',
+      'Less',
+      'Git',
+      'Wordpress',
+    ],
+  },
+]
+
+export const projects = []

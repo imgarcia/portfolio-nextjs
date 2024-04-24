@@ -59,4 +59,8 @@ body {
   .svg {
     @apply w-[50px] h-[50px];
   }
+
+  .badge {
+    @apply transition px-5 py-5 rounded-lg bg-dark-1 bg-opacity-50 backdrop-blur-md;
+  }
 }
