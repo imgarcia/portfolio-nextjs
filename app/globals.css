@@ -34,15 +34,15 @@ body {
   }
 
   .main-background-gradient {
-    @apply bg-gradient-to-b from-[#253439] to-[#46636c];
+    @apply bg-gradient-to-b from-[#253439] to-dark-3;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-t from-[#c99d72] to-[#a67240] bg-clip-text text-transparent;
+    @apply bg-gradient-to-t from-brown-1 to-brown-4 bg-clip-text text-transparent;
   }
 
   .text-gradient-light {
-    @apply bg-gradient-to-t from-[#dcbfa3] to-[#c99d72] bg-clip-text text-transparent;
+    @apply bg-gradient-to-t from-brown-5 to-brown-1 bg-clip-text text-transparent;
   }
 
   .section-title {
@@ -51,7 +51,7 @@ body {
 
   .section-title::after {
     content: '';
-    @apply block my-8 h-2 border-t-2 w-[10%] border-[#a67240] m-auto;
+    @apply block my-8 h-2 border-t-2 w-[10%] border-brown-4 m-auto;
   }
 }
 

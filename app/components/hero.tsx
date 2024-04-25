@@ -23,19 +23,18 @@ const Hero = () => {
         <h2 className="text-2xl text-gradient mt-5">
           A Frontend Software Engineer.
         </h2>
-        <div className="my-8 h-2 border-t-2 w-[15%] border-[#a67240] m-auto" />
+        <div className="my-8 h-2 border-t-2 w-[15%] border-divider-1 m-auto" />
         <p className="text-brown-5 text-xl xl:w-[65%] m-auto">
-          A front-end developer passionate about building accessible and user
-          friendly web applications and web sites.{' '}
+          An engineer passionate about building accessible and user friendly web
+          applications and web sites.{' '}
         </p>
         <div className="flex-center mt-10">
-          <div className="p-2 w-auto transform animate-bounce border-2 border-[#c99d72] rounded-full">
+          <div className="p-2 w-auto transform animate-bounce border-2 border-brown-1 rounded-full">
             <Image
               src="/icons/down-chevron.svg"
               alt="scroll down chevron icon"
               width={20}
               height={20}
-              className=""
             />
           </div>
         </div>

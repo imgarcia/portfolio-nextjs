@@ -34,6 +34,9 @@ const config: Config = {
           4: '#a67240',
           5: '#dcbfa3',
         },
+        divider: {
+          1: '#a67240',
+        },
       },
     },
   },
