@@ -1,4 +1,6 @@
 import { experiences } from '@/constants'
+import ExperienceCard from './experience-card'
+import Link from 'next/link'
 
 const Experience = () => {
   return (
@@ -9,29 +11,17 @@ const Experience = () => {
       <h2 className="section-title">Experience</h2>
       <div className="flex flex-col gap-10">
         {experiences.map((exp) => (
-          <div
-            key={exp.companyName}
-            className="flex flex-col gap-5 md:flex-row md:gap-10 justify-between p-5 badge hover:bg-dark-2 hover:shadow-lg hover:-translate-y-1"
-          >
-            <div className="text-sm w-[250px]">
-              {exp.startDate} - {exp.endDate}
-            </div>
-            <div>
-              <h3 className="text-md text-brown-1 leading-none mb-3">
-                {exp.companyName} •{' '}
-                <span className="italic">{exp.jobTitle}</span>
-              </h3>
-              <p className="text-sm">{exp.description}</p>
-              <div className="flex flex-wrap gap-2 mt-5">
-                {exp.techStack.map((tech) => (
-                  <div key={tech} className="badge text-xs px-3 py-2">
-                    {tech}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <ExperienceCard key={exp.companyName} {...exp} />
         ))}
+      </div>
+      <div className="flex-center">
+        <Link
+          href="/docs/MG-Resume-2024.pdf"
+          target="_blank"
+          className="text-brown-5 hover:text-brown-1"
+        >
+          View full resume
+        </Link>
       </div>
     </section>
   )

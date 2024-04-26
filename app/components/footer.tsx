@@ -9,18 +9,21 @@ const Footer = () => {
         {currentYear} - Handcrafted by me using{' '}
         <Link
           href="https://code.visualstudio.com/"
-          className="font-semibold text-brown-1"
+          className="font-semibold text-brown-1 hover:hover:text-brown-5"
         >
           Visual Studio Code
         </Link>
         ,{' '}
-        <Link href="https://nextjs.org/" className="font-semibold text-brown-1">
+        <Link
+          href="https://nextjs.org/"
+          className="font-semibold text-brown-1 hover:hover:text-brown-5"
+        >
           Next.js
         </Link>{' '}
         and{' '}
         <Link
           href="https://tailwindcss.com/"
-          className="font-semibold text-brown-1"
+          className="font-semibold text-brown-1 hover:hover:text-brown-5"
         >
           Tailwind CSS
         </Link>
