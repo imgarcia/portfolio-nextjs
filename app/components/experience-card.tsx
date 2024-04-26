@@ -1,5 +1,3 @@
-'use client'
-
 import { Experience } from '@/constants'
 import Link from 'next/link'
 
