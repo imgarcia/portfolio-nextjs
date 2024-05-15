@@ -1,5 +1,8 @@
+'use client'
+
 import { Experience } from '@/constants'
 import Link from 'next/link'
+import { MouseEventHandler } from 'react'
 
 const Card = ({
   startDate,
@@ -8,7 +11,9 @@ const Card = ({
   jobTitle,
   description,
   techStack,
-}: Omit<Experience, 'companyUrl'>) => {
+  projects,
+  companyUrl
+}: Experience) => {
   return (
     <div
       key={companyName}
@@ -19,7 +24,10 @@ const Card = ({
       </div>
       <div className="flex flex-col">
         <h3 className="text-md text-brown-1 leading-none mb-3">
-          {companyName} • <span className="italic">{jobTitle}</span>
+          {companyUrl ?
+            <Link href={companyUrl} target="_blank" aria-label="Open employer company website in a new tab" title="Open employer company website in a new tab">{companyName} • <span className="italic">{jobTitle}</span></Link>
+            : <div>{companyName} • <span className="italic">{jobTitle}</span></div>
+          }
         </h3>
         <p className="text-sm">{description}</p>
         <div className="flex flex-wrap gap-2 mt-5">
@@ -29,6 +37,18 @@ const Card = ({
             </div>
           ))}
         </div>
+        {projects &&
+          <>
+            <h3 className="mt-5 mb-3 text-brown-1">Projects</h3>
+            <div className="flex flex-wrap gap-2">
+              {projects?.map(({ name, url }) => (
+                <div key={name} >
+                  <Link href={url} target="_blank" aria-label={`Open project ${name} in new tab`} title={`Open project ${name} in new tab`} className="badge text-xs px-3 py-2 hover:bg-brown-2">{name}</Link>
+                </div>
+              ))}
+            </div>
+          </>
+        }
       </div>
     </div>
   )
@@ -42,19 +62,27 @@ const ExperienceCard = ({
   jobTitle,
   description,
   techStack,
+  projects
 }: Experience) => {
+  const handleDivOnClick: MouseEventHandler<HTMLDivElement> = (e) => {
+    e.stopPropagation();
+    window.open(companyUrl, '_blank')
+  }
+
   if (companyUrl) {
     return (
-      <Link href={companyUrl} target="_blank">
+      <div onClick={(e) => handleDivOnClick(e)} className="hover:cursor-pointer">
         <Card
           startDate={startDate}
           endDate={endDate}
           companyName={companyName}
+          companyUrl={companyUrl}
           jobTitle={jobTitle}
           description={description}
           techStack={techStack}
+          projects={projects}
         />
-      </Link>
+      </div>
     )
   }
 
@@ -63,9 +91,11 @@ const ExperienceCard = ({
       startDate={startDate}
       endDate={endDate}
       companyName={companyName}
+      companyUrl={companyUrl}
       jobTitle={jobTitle}
       description={description}
       techStack={techStack}
+      projects={projects}
     />
   )
 }

@@ -20,11 +20,11 @@ const Contact = () => {
 
       <div className="flex-center gap-10">
         <Link
-          href="mailto:mario.garcia1@live.com"
+          href="mailto:mario.garcia1@live.com?subject=I%20am%20interested%20in%20working%20together!"
           className="group mt-10 pt-[8px]"
           rel="noreferrer noopener"
           target="_blank"
-          title="Send Email"
+          title="Send me an email"
         >
           <svg
             viewBox="0 0 24 24"

@@ -1,6 +1,6 @@
 export const skills = [
   'React',
-  'React Native',
+  'TypeScript',
   'Next.js',
   'JavaScript',
   'State Management',
@@ -8,20 +8,20 @@ export const skills = [
   'Jotai',
   'RTK Query',
   'React Query',
-  'TypeScript',
+  'Jest',
+  'React Testing Library',
+  'Cypress',
   'HTML',
   'CSS',
   'Sass',
   'Tailwind',
   'Git',
   'Framer-Motion',
+  'React Native',
   'Firebase',
-  'Jest',
-  'React Testing Library',
-  'Cypress',
   'Storybook',
   'Styled-Components',
-  'Restful API',
+  'Restful APIs',
   'Postman',
   'Scrum',
   'Agile',
@@ -36,6 +36,12 @@ export type Experience = {
   jobTitle: string
   description: string
   techStack: string[]
+  projects?: Project[]
+}
+
+export type Project = {
+  name: string
+  url: string
 }
 
 export const experiences: Experience[] = [
@@ -46,17 +52,21 @@ export const experiences: Experience[] = [
     companyName: 'Extend, Inc',
     jobTitle: 'Senior Software Engineer',
     description:
-      'Collaborate with product and design teams to create new features for our consumer facing merchant portal and internal admin portal based on customer feedback and business stakeholder needs.',
+      'Collaborated closely with product and design teams to develop new features for our consumer-facing merchant portal, responding to customer feedback. Using React, and TypeScript, I implemented features and utilized React Query and RTK Query to manage data fetching, setting, and updating. Additionally, I contributed to refactoring and creating new components for our internal admin portal based on business stakeholders\' requirements. Integration of front-end components with RESTful APIs was a key aspect of my role. Contributed in refactoring hundreds of tests from Enzyme to Jest and React Testing Library. I successfully replaced the legacy login process with OKTA\'s authentication and authorization service. Furthermore, I collaborated with the marketing and design teams to create post-purchase email templates aimed at increasing sales and revenue. I also provided support to colleagues by sharing HTML best practices, assisting with unit testing, and debugging code.',
     techStack: [
       'React',
       'TypeScript',
       'Redux',
       'React Query',
       'Unit Testing',
+      'Jest',
+      'React Testing Library',
       'Cypress',
       'Restful API',
       'Postman',
       'Git',
+      'Styled Components',
+      'CSS Modules',
       'Figma',
       'AWS',
       'Email Templates',
@@ -69,7 +79,7 @@ export const experiences: Experience[] = [
     companyName: 'Oracle + NetSuite',
     jobTitle: 'Senior Web Developer',
     description:
-      'Collaborate with internal business stakeholders to design and develop internal tools to centralize sales processes in an application known as the Sales Optimization Platform.',
+      'Collaborated closely with internal business stakeholders to streamline sales processes by designing and developing internal tools utilizing NetSuite API, ReactJS + Redux, D3.js, and other libraries. Additionally, I led the development of new, contemporary SuiteCommerce themes geared towards consumer interaction, ensuring they were responsive and easily implementable by Professional Services and partners. I played a key role in reviewing and refining multiple iterations of SuiteCommerce components and customizations. A significant aspect of my role involved researching, documenting, and implementing UI/UX best practices, effectively educating team members and Professional Services to ensure alignment with evolving standards.',
     techStack: [
       'React',
       'JavaScript',
@@ -80,7 +90,7 @@ export const experiences: Experience[] = [
       'Sass',
       'Git',
       'SuiteCommerce Advanced',
-    ],
+    ]
   },
   {
     companyUrl:
@@ -90,7 +100,7 @@ export const experiences: Experience[] = [
     companyName: 'NetSuite, Inc',
     jobTitle: 'Web Developer & Consultant',
     description:
-      'Lead front-end developer responsible for developing custom SuiteCommerce websites following customers designs and feedback',
+      'Lead front-end developer responsible for developing custom SuiteCommerce websites following customers designs and feedback, while also providing technical guidance to other team members. I guided teams in resolving escalations for prominent projects experiencing delays caused by technical obstacles.',
     techStack: [
       'SuiteCommerce Advanced',
       'Backbone.js',
@@ -98,6 +108,11 @@ export const experiences: Experience[] = [
       'Less',
       'Git',
     ],
+    projects: [
+      { name: 'Natura Brasil', url: 'https://www.naturabrasil.com/' },
+      { name: 'SoccerX', url: 'https://www.soccerx.com/' },
+      { name: 'Splash Super Center', url: 'https://www.splashsupercenter.com/' },
+    ]
   },
   {
     companyUrl: '',
@@ -106,15 +121,20 @@ export const experiences: Experience[] = [
     companyName: 'The New Office, Inc',
     jobTitle: 'Web Developer',
     description:
-      'Responsible for developing and updating dynamic eCommerce websites for clients using NetSuite SuiteCommerce Advanced platform',
+      'Responsible for developing custom dynamic eCommerce responsive websites for customers using NetSuite SuiteCommerce Advanced platform following best practices and WCAG & ADA standards, while assisting in Q&A and troubleshooting issues.',
     techStack: [
       'SuiteCommerce Advanced',
       'Backbone.js',
       'JavaScript',
       'Less',
       'Git',
-      'Wordpress',
+      'WordPress',
     ],
+    projects: [
+      { name: 'TxSmartBuy', url: 'https://www.txsmartbuy.com/' },
+      { name: 'Insperity', url: 'https://www.insperity.com/' },
+      { name: 'Origin Acoustics', url: 'https://www.originacoustics.com/' }
+    ]
   },
 ]
 

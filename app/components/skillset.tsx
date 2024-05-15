@@ -11,7 +11,7 @@ const Skillset = () => {
         {skills.map((skill) => (
           <div
             key={skill}
-            className="text-sm badge px-3 py-2 hover:bg-dark-2 hover:shadow-lg hover:-translate-y-1"
+            className="text-sm badge px-3 py-2 hover:bg-brown-2 hover:shadow-lg hover:-translate-y-1"
           >
             {skill}
           </div>

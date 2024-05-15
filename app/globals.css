@@ -20,6 +20,16 @@ body {
 
 /* =============================== */
 
+@layer base {
+  .focus {
+    @apply focus:outline-none focus:outline-brown-1
+  }
+
+  a:focus {
+    @apply focus
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
