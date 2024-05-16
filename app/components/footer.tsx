@@ -32,7 +32,7 @@ const Footer = () => {
           href="https://vercel.com/"
           className="font-semibold text-brown-1 hover:hover:text-brown-5"
         >
-          Tailwind CSS
+          Vercel
         </Link>
         .
       </p>
