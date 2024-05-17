@@ -7,8 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title:
-    'Mario Garcia Portfolio | Software Engineer | Frontend Engineer | Web Developer',
-  description: '---',
+    'Mario Garcia Portfolio | Frontend Software Engineer | Web Developer | Austin, TX | Brownsville, TX',
+  description:
+    'Mario Garcia, an frontend software engineer located in the Austin, Texas area, who is passionate about building accessible and user friendly web applications and web sites.',
 }
 
 export default function RootLayout({
