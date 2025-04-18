@@ -46,13 +46,33 @@ export type Project = {
 
 export const experiences: Experience[] = [
   {
+    companyUrl: 'https://www.congobrands.com/',
+    startDate: 'July 2024',
+    endDate: 'Current',
+    companyName: 'Congo Brands',
+    jobTitle: 'Front-End Web Developer',
+    description:
+      'At Congo Brands, I manage and maintain high-traffic eCommerce sites for Alani Nu, PRIME Hydration, and Lunchly across Shopify and SuiteCommerce Advanced platforms. I work closely with the eCommerce team to optimize content, create custom pages and components, and ensure brand consistency. As the Lead SuiteCommerce Advanced Developer for the Alani Nu and PRIME distributor portals, I deliver custom development solutions, including building extensions and integrating tools like Microsoft Power BI for real-time analytics. I also initiated and developed a comprehensive end-to-end test suite using Cypress to enhance site reliability, and I provide ongoing technical support across both platforms.',
+    techStack: [
+      'Shopify',
+      'NetSuite',
+      'SuiteScript',
+      'JavaScript',
+      'JSON',
+      'SuiteCommerce Advanced',
+      'Email Templates',
+      'Cypress.io',
+      'E2E Testing',
+    ],
+  },
+  {
     companyUrl: 'https://www.extend.com/',
     startDate: 'Aug 2021',
     endDate: 'Dec 2023',
     companyName: 'Extend, Inc',
     jobTitle: 'Senior Software Engineer',
     description:
-      'Collaborated closely with product and design teams to develop new features for our consumer-facing merchant portal, responding to customer feedback. Using React, and TypeScript, I implemented features and utilized React Query and RTK Query to manage data fetching, setting, and updating. Additionally, I contributed to refactoring and creating new components for our internal admin portal based on business stakeholders\' requirements. Integration of front-end components with RESTful APIs was a key aspect of my role. Contributed in refactoring hundreds of tests from Enzyme to Jest and React Testing Library. I successfully replaced the legacy login process with OKTA\'s authentication and authorization service. Furthermore, I collaborated with the marketing and design teams to create post-purchase email templates aimed at increasing sales and revenue. I also provided support to colleagues by sharing HTML best practices, assisting with unit testing, and debugging code.',
+      "Collaborated closely with product and design teams to develop new features for our consumer-facing merchant portal, responding to customer feedback. Using React, and TypeScript, I implemented features and utilized React Query and RTK Query to manage data fetching, setting, and updating. Additionally, I contributed to refactoring and creating new components for our internal admin portal based on business stakeholders' requirements. Integration of front-end components with RESTful APIs was a key aspect of my role. Contributed in refactoring hundreds of tests from Enzyme to Jest and React Testing Library. I successfully replaced the legacy login process with OKTA's authentication and authorization service. Furthermore, I collaborated with the marketing and design teams to create post-purchase email templates aimed at increasing sales and revenue. I also provided support to colleagues by sharing HTML best practices, assisting with unit testing, and debugging code.",
     techStack: [
       'React',
       'TypeScript',
@@ -90,7 +110,7 @@ export const experiences: Experience[] = [
       'Sass',
       'Git',
       'SuiteCommerce Advanced',
-    ]
+    ],
   },
   {
     companyUrl:
@@ -111,8 +131,11 @@ export const experiences: Experience[] = [
     projects: [
       { name: 'Natura Brasil', url: 'https://www.naturabrasil.com/' },
       { name: 'SoccerX', url: 'https://www.soccerx.com/' },
-      { name: 'Splash Super Center', url: 'https://www.splashsupercenter.com/' },
-    ]
+      {
+        name: 'Splash Super Center',
+        url: 'https://www.splashsupercenter.com/',
+      },
+    ],
   },
   {
     companyUrl: '',
@@ -133,8 +156,8 @@ export const experiences: Experience[] = [
     projects: [
       { name: 'TxSmartBuy', url: 'https://www.txsmartbuy.com/' },
       { name: 'Insperity', url: 'https://www.insperity.com/' },
-      { name: 'Origin Acoustics', url: 'https://www.originacoustics.com/' }
-    ]
+      { name: 'Origin Acoustics', url: 'https://www.originacoustics.com/' },
+    ],
   },
 ]
 
