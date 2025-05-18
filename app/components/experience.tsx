@@ -16,7 +16,7 @@ const Experience = () => {
       </div>
       <div className="flex-center">
         <Link
-          href="/docs/Mario-Garcia-Resume-2024.pdf"
+          href="/docs/Mario-Garcia-Resume.pdf"
           target="_blank"
           className="text-brown-5 hover:text-brown-1"
         >

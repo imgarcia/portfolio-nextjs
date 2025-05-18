@@ -12,7 +12,8 @@ const Card = ({
   description,
   techStack,
   projects,
-  companyUrl
+  companyUrl,
+  handleLinkOnClick,
 }: Experience) => {
   return (
     <div
@@ -24,10 +25,20 @@ const Card = ({
       </div>
       <div className="flex flex-col">
         <h3 className="text-md text-brown-1 leading-none mb-3">
-          {companyUrl ?
-            <Link href={companyUrl} target="_blank" aria-label="Open employer company website in a new tab" title="Open employer company website in a new tab">{companyName} • <span className="italic">{jobTitle}</span></Link>
-            : <div>{companyName} • <span className="italic">{jobTitle}</span></div>
-          }
+          {companyUrl ? (
+            <Link
+              href={companyUrl}
+              target="_blank"
+              aria-label="Open employer company website in a new tab"
+              title="Open employer company website in a new tab"
+            >
+              {companyName} • <span className="italic">{jobTitle}</span>
+            </Link>
+          ) : (
+            <div>
+              {companyName} • <span className="italic">{jobTitle}</span>
+            </div>
+          )}
         </h3>
         <p className="text-sm">{description}</p>
         <div className="flex flex-wrap gap-2 mt-5">
@@ -37,18 +48,27 @@ const Card = ({
             </div>
           ))}
         </div>
-        {projects &&
+        {projects && (
           <>
             <h3 className="mt-5 mb-3 text-brown-1">Projects</h3>
             <div className="flex flex-wrap gap-2">
               {projects?.map(({ name, url }) => (
-                <div key={name} >
-                  <Link href={url} target="_blank" aria-label={`Open project ${name} in new tab`} title={`Open project ${name} in new tab`} className="badge text-xs px-3 py-2 hover:bg-brown-2">{name}</Link>
+                <div key={name}>
+                  <Link
+                    href={url}
+                    target="_blank"
+                    aria-label={`Open project ${name} in new tab`}
+                    title={`Open project ${name} in new tab`}
+                    className="badge text-xs px-3 py-2 hover:bg-brown-2"
+                    onClick={handleLinkOnClick}
+                  >
+                    {name}
+                  </Link>
                 </div>
               ))}
             </div>
           </>
-        }
+        )}
       </div>
     </div>
   )
@@ -62,16 +82,22 @@ const ExperienceCard = ({
   jobTitle,
   description,
   techStack,
-  projects
+  projects,
 }: Experience) => {
-  const handleDivOnClick: MouseEventHandler<HTMLDivElement> = (e) => {
-    e.stopPropagation();
+  const handleDivOnClick: MouseEventHandler<HTMLDivElement> = () => {
     window.open(companyUrl, '_blank')
+  }
+
+  const handleLinkOnClick: MouseEventHandler<HTMLDivElement> = (e) => {
+    e.stopPropagation()
   }
 
   if (companyUrl) {
     return (
-      <div onClick={(e) => handleDivOnClick(e)} className="hover:cursor-pointer">
+      <div
+        onClick={(e) => handleDivOnClick(e)}
+        className="experience-card-company-link hover:cursor-pointer relative"
+      >
         <Card
           startDate={startDate}
           endDate={endDate}
@@ -81,6 +107,7 @@ const ExperienceCard = ({
           description={description}
           techStack={techStack}
           projects={projects}
+          handleLinkOnClick={handleLinkOnClick}
         />
       </div>
     )
@@ -96,6 +123,7 @@ const ExperienceCard = ({
       description={description}
       techStack={techStack}
       projects={projects}
+      handleLinkOnClick={handleLinkOnClick}
     />
   )
 }

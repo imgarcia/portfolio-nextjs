@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react'
+
 export const skills = [
   'React',
   'TypeScript',
@@ -37,6 +39,7 @@ export type Experience = {
   description: string
   techStack: string[]
   projects?: Project[]
+  handleLinkOnClick?: MouseEventHandler
 }
 
 export type Project = {
@@ -63,6 +66,18 @@ export const experiences: Experience[] = [
       'Email Templates',
       'Cypress.io',
       'E2E Testing',
+    ],
+    projects: [
+      { name: 'Alani Nu | Shopify', url: 'https://www.alaninu.com/' },
+      { name: 'PRIME | Shopify', url: 'https://www.drinkprime.com/' },
+      {
+        name: 'Alani Nu | SuiteCommerce',
+        url: 'https://www.portal.alaninu.com/',
+      },
+      {
+        name: 'PRIME | SuiteCommerce',
+        url: 'https://www.portal.drinkprime.com/',
+      },
     ],
   },
   {
