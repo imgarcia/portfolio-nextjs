@@ -72,11 +72,11 @@ export const experiences: Experience[] = [
       { name: 'PRIME | Shopify', url: 'https://www.drinkprime.com/' },
       {
         name: 'Alani Nu | SuiteCommerce',
-        url: 'https://www.portal.alaninu.com/',
+        url: 'https://portal.alaninu.com/',
       },
       {
         name: 'PRIME | SuiteCommerce',
-        url: 'https://www.portal.drinkprime.com/',
+        url: 'https://portal.drinkprime.com/',
       },
     ],
   },
