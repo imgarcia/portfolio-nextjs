@@ -1,8 +1,97 @@
+'use client'
+
+import { useRef } from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+
 import { experiences } from '@/constants'
 import ExperienceCard from './experience-card'
 import Link from 'next/link'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Experience = () => {
+  const containerRef = useRef()
+
+  useGSAP(() => {
+    const cOne = 1
+    const childOne = document.querySelector(
+      `.experience-card:nth-child(${cOne})`
+    )
+    gsap.to(childOne, {
+      x: 0,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        trigger: childOne,
+        start: 'top 90%',
+        end: 'bottom center',
+      },
+    })
+    const cTwo = 2
+    const childTwo = document.querySelector(
+      `.experience-card:nth-child(${cTwo})`
+    )
+    gsap.to(childTwo, {
+      x: 0,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        trigger: childTwo,
+        start: 'top 90%',
+        end: 'bottom center',
+      },
+    })
+    const cThree = 3
+    const childThree = document.querySelector(
+      `.experience-card:nth-child(${cThree})`
+    )
+    gsap.to(childThree, {
+      x: 0,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        trigger: childThree,
+        start: 'top 90%',
+        end: 'bottom center',
+      },
+    })
+    const cFour = 4
+    const childFour = document.querySelector(
+      `.experience-card:nth-child(${cFour})`
+    )
+    gsap.to(childFour, {
+      x: 0,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        trigger: childFour,
+        start: 'top 90%',
+        end: 'bottom center',
+      },
+    })
+    const cFive = 5
+    const childFive = document.querySelector(
+      `.experience-card:nth-child(${cFive})`
+    )
+    gsap.to(childFive, {
+      x: 0,
+      opacity: 1,
+      ease: 'none',
+      scrollTrigger: {
+        scrub: true,
+        trigger: childFive,
+        start: 'top 90%',
+        end: 'bottom center',
+      },
+    })
+  })
+
   return (
     <section
       id="experience"
@@ -10,9 +99,13 @@ const Experience = () => {
     >
       <h2 className="section-title">Experience</h2>
       <div className="flex flex-col gap-10">
-        {experiences.map((exp) => (
-          <ExperienceCard key={exp.companyName} {...exp} />
-        ))}
+        {experiences.map((exp, index) => {
+          const isEven = index % 2 === 0
+
+          return (
+            <ExperienceCard key={exp.companyName} {...exp} isEven={isEven} />
+          )
+        })}
       </div>
       <div className="flex-center">
         <Link
