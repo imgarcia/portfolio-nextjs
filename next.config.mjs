@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  transpilePackages: ['gsap'], // Add 'gsap' to the array
+}
 
-export default nextConfig;
+export default nextConfig
