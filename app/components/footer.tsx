@@ -27,6 +27,13 @@ const Footer = () => {
         >
           Tailwind CSS
         </Link>
+        , animated with{' '}
+        <Link
+          href="https://gsap.com/"
+          className="font-semibold text-brown-1 hover:hover:text-brown-5"
+        >
+          GSAP
+        </Link>
         , deployed with{' '}
         <Link
           href="https://vercel.com/"

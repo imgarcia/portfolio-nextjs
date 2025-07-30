@@ -18,6 +18,7 @@ export const skills = [
   'Sass',
   'Tailwind',
   'Git',
+  'GSAP',
   'Framer-Motion',
   'React Native',
   'Firebase',

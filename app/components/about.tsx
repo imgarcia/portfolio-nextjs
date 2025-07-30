@@ -19,7 +19,7 @@ const About = () => {
       duration: 3,
       scrollTrigger: {
         // markers: true,
-        scrub: true,
+        scrub: 1,
         trigger: '.about-me-text-container',
         start: 'top 90%',
         end: 'bottom center',
