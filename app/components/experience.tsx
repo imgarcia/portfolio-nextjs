@@ -24,7 +24,7 @@ const Experience = () => {
       opacity: 1,
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
         trigger: childOne,
         start: 'top 90%',
         end: 'bottom center',
@@ -39,7 +39,7 @@ const Experience = () => {
       opacity: 1,
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
         trigger: childTwo,
         start: 'top 90%',
         end: 'bottom center',
@@ -54,7 +54,7 @@ const Experience = () => {
       opacity: 1,
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
         trigger: childThree,
         start: 'top 90%',
         end: 'bottom center',
@@ -69,7 +69,7 @@ const Experience = () => {
       opacity: 1,
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
         trigger: childFour,
         start: 'top 90%',
         end: 'bottom center',
@@ -84,7 +84,7 @@ const Experience = () => {
       opacity: 1,
       ease: 'none',
       scrollTrigger: {
-        scrub: true,
+        scrub: 1,
         trigger: childFive,
         start: 'top 90%',
         end: 'bottom center',
@@ -95,7 +95,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="min-h-screen flex flex-col pt-[15%] gap-10 md:w-[75%] 2xl:w-[50%] xl:px-10"
+      className="min-h-screen flex flex-col pt-[15%] gap-10 md:w-[75%] 2xl:w-[50%] xl:px-10 z-10"
     >
       <h2 className="section-title">Experience</h2>
       <div className="flex flex-col gap-10">

@@ -39,6 +39,22 @@ const Hero = () => {
         duration: 1.25,
         stagger: 0.5,
       })
+
+      // scroll animation
+      gsap.to('.animated-circle', {
+        scale: 10,
+        opacity: 1,
+        ease: 'none',
+        duration: 3,
+        overflowX: 'hidden',
+        scrollTrigger: {
+          trigger: '#about',
+          // markers: true,
+          scrub: 1,
+          start: 'top',
+          end: window.innerHeight,
+        },
+      })
     },
     { scope: containerRef }
   ) // Associate the animations with the ref
@@ -50,7 +66,7 @@ const Hero = () => {
       className="min-h-screen flex flex-col pt-[15%] gap-10 md:w-[75%] 2xl:w-[50%] xl:px-10"
     >
       <div className="basis-1/2 flex-center">
-        <div className="rounded-full border-[3px] border-brown-1 overflow-hidden">
+        <div className="rounded-full border-[3px] border-brown-1 overflow-hidden z-10">
           <Image
             src="/images/mg-profile.jpeg"
             alt="mario garcia profile image"
@@ -59,6 +75,7 @@ const Hero = () => {
             className="portfolio-portrait-img transition-all transform duration-500 hover:w-[235px]"
           />
         </div>
+        <div className="absolute rounded-full bg-dark-2 overflow-hidden w-[225px] h-[225px] animated-circle"></div>
       </div>
       <div className="basis-1/2 text-center">
         <div className="hero-text-intro-container">

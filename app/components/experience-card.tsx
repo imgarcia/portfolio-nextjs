@@ -18,7 +18,7 @@ const Card = ({
   return (
     <div
       key={companyName}
-      className="flex flex-col gap-5 md:flex-row p-5 badge hover:bg-dark-2 hover:shadow-lg hover:-translate-y-1"
+      className="flex flex-col gap-5 md:flex-row p-5 badge hover:bg-dark-3 hover:shadow-lg hover:-translate-y-1"
     >
       <div className="text-sm w-[150px] flex-grow-0 flex-shrink-0">
         {startDate} - {endDate}

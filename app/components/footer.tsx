@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-divider-1 pt-5 text-center text-xs">
+    <footer className="w-full border-t-2 border-divider-1 pt-5 text-center text-xs z-10">
       <p>
         {currentYear} - Handcrafted using{' '}
         <Link
