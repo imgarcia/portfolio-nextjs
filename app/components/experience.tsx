@@ -3,13 +3,10 @@
 import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { experiences } from '@/constants'
 import ExperienceCard from './experience-card'
 import Link from 'next/link'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const Experience = () => {
   const containerRef = useRef()

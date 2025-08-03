@@ -4,11 +4,8 @@ import { useRef } from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/dist/SplitText'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import { skills } from '@/constants'
-
-gsap.registerPlugin(SplitText, ScrollTrigger)
 
 const Skillset = () => {
   const containerRef = useRef()
