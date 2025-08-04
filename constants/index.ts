@@ -18,6 +18,7 @@ export const skills = [
   'Sass',
   'Tailwind',
   'Git',
+  'GSAP',
   'Framer-Motion',
   'React Native',
   'Firebase',
@@ -31,6 +32,7 @@ export const skills = [
 ]
 
 export type Experience = {
+  isEven?: boolean
   companyUrl?: string
   startDate: string
   endDate: string

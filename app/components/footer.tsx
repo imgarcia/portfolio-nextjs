@@ -4,7 +4,7 @@ const currentYear = new Date().getFullYear()
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-divider-1 pt-5 text-center text-xs">
+    <footer className="w-full border-t-2 border-divider-1 pt-5 text-center text-xs z-10">
       <p>
         {currentYear} - Handcrafted using{' '}
         <Link
@@ -26,6 +26,13 @@ const Footer = () => {
           className="font-semibold text-brown-1 hover:hover:text-brown-5"
         >
           Tailwind CSS
+        </Link>
+        , animated with{' '}
+        <Link
+          href="https://gsap.com/"
+          className="font-semibold text-brown-1 hover:hover:text-brown-5"
+        >
+          GSAP
         </Link>
         , deployed with{' '}
         <Link

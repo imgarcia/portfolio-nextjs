@@ -18,7 +18,7 @@ const Card = ({
   return (
     <div
       key={companyName}
-      className="flex flex-col gap-5 md:flex-row p-5 badge hover:bg-dark-2 hover:shadow-lg hover:-translate-y-1"
+      className="flex flex-col gap-5 md:flex-row p-5 badge hover:bg-dark-3 hover:shadow-lg hover:-translate-y-1"
     >
       <div className="text-sm w-[150px] flex-grow-0 flex-shrink-0">
         {startDate} - {endDate}
@@ -75,6 +75,7 @@ const Card = ({
 }
 
 const ExperienceCard = ({
+  isEven,
   companyUrl,
   startDate,
   endDate,
@@ -96,7 +97,9 @@ const ExperienceCard = ({
     return (
       <div
         onClick={(e) => handleDivOnClick(e)}
-        className="experience-card-company-link hover:cursor-pointer relative"
+        className={`experience-card experience-card-company-link hover:cursor-pointer relative opacity-0 ${
+          isEven ? '-translate-x-full' : 'translate-x-full'
+        }`}
       >
         <Card
           startDate={startDate}
@@ -114,17 +117,19 @@ const ExperienceCard = ({
   }
 
   return (
-    <Card
-      startDate={startDate}
-      endDate={endDate}
-      companyName={companyName}
-      companyUrl={companyUrl}
-      jobTitle={jobTitle}
-      description={description}
-      techStack={techStack}
-      projects={projects}
-      handleLinkOnClick={handleLinkOnClick}
-    />
+    <div className="experience-card opacity-0 -translate-x-full">
+      <Card
+        startDate={startDate}
+        endDate={endDate}
+        companyName={companyName}
+        companyUrl={companyUrl}
+        jobTitle={jobTitle}
+        description={description}
+        techStack={techStack}
+        projects={projects}
+        handleLinkOnClick={handleLinkOnClick}
+      />
+    </div>
   )
 }
 

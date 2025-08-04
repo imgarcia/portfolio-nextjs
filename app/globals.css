@@ -22,17 +22,21 @@ body {
 
 @layer base {
   .focus {
-    @apply focus:outline-none focus:outline-brown-1
+    @apply focus:outline-none focus:outline-brown-1;
   }
 
   a:focus {
-    @apply focus
+    @apply focus;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .flex-v-center {
+    @apply flex justify-center;
   }
 
   .flex-center {
@@ -66,6 +70,16 @@ body {
 }
 
 @layer components {
+  .hero-section {
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1588993608283-7f0eda4438be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-color: rgba(30, 42, 46, 0.8);
+    background-blend-mode: darken;
+    background-size: cover;
+    @apply w-screen;
+  }
+
   .svg {
     @apply w-[50px] h-[50px];
   }
