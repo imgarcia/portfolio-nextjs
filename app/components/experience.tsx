@@ -24,7 +24,7 @@ const Experience = () => {
         scrub: 1,
         trigger: childOne,
         start: 'top 90%',
-        end: 'bottom center',
+        end: 'bottom 80%',
       },
     })
     const cTwo = 2
@@ -39,7 +39,7 @@ const Experience = () => {
         scrub: 1,
         trigger: childTwo,
         start: 'top 90%',
-        end: 'bottom center',
+        end: 'bottom 80%',
       },
     })
     const cThree = 3
@@ -54,7 +54,7 @@ const Experience = () => {
         scrub: 1,
         trigger: childThree,
         start: 'top 90%',
-        end: 'bottom center',
+        end: 'bottom 80%',
       },
     })
     const cFour = 4
@@ -69,7 +69,7 @@ const Experience = () => {
         scrub: 1,
         trigger: childFour,
         start: 'top 90%',
-        end: 'bottom center',
+        end: 'bottom 80%',
       },
     })
     const cFive = 5
@@ -84,7 +84,7 @@ const Experience = () => {
         scrub: 1,
         trigger: childFive,
         start: 'top 90%',
-        end: 'bottom center',
+        end: 'bottom 80%',
       },
     })
   })
