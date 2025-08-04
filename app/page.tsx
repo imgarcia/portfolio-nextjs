@@ -16,7 +16,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger)
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-10 main-background-gradient overflow-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-between px-10 main-background-gradient overflow-hidden">
       <Navbar />
       <Hero />
       <About />
