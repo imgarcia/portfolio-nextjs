@@ -8,7 +8,7 @@ import { SplitText } from 'gsap/dist/SplitText'
 import { skills } from '@/constants'
 
 const Skillset = () => {
-  const containerRef = useRef()
+  const containerRef = useRef<HTMLElement>()
 
   useGSAP(() => {
     let splitFirstText = SplitText.create('.badge', {

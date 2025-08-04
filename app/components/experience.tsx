@@ -9,7 +9,7 @@ import ExperienceCard from './experience-card'
 import Link from 'next/link'
 
 const Experience = () => {
-  const containerRef = useRef()
+  const containerRef = useRef<HTMLElement>()
 
   useGSAP(() => {
     const cOne = 1
