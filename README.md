@@ -2,7 +2,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Personal Portfolio
 
-Personal portfolio website using Next.js and TailwindCSS.
+Personal portfolio website using Next.js, TailwindCSS and GSAP animations.
 
 ![image](https://github.com/imgarcia/portfolio-nextjs/assets/66264099/7a7d8957-f674-4795-a43f-7c1dc6de6677)
-

@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react'
 import Skillset from './skillset'
 
 const About = () => {
-  const containerRef = useRef()
+  const containerRef = useRef<HTMLElement>()
 
   useGSAP(() => {
     gsap.to('.about-me-text-container', {
