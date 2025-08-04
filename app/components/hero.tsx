@@ -12,6 +12,13 @@ const Hero = () => {
 
   useGSAP(
     () => {
+      const heroTextIntroTl = gsap.timeline({
+        delay: 0.5,
+      })
+      heroTextIntroTl.to('.hero-text-intro-container-wrapper', {
+        opacity: 1,
+      })
+
       // animate hero description lines
       let splitIntroText = SplitText.create('.hero-text-intro-container', {
         type: 'chars, words, lines',
@@ -24,17 +31,24 @@ const Hero = () => {
         stagger: 0.5,
       })
 
+      const heroTextDescriptionTl = gsap.timeline({
+        delay: 2,
+      })
+      heroTextDescriptionTl.to('.hero-text-description-container-wrapper', {
+        opacity: 1,
+      })
+
       // animate hero description lines
       let splitDescription = SplitText.create('.hero-text-description', {
         type: 'chars, words, lines',
       })
-      gsap.from(splitDescription.lines, {
+      gsap.from(splitDescription.words, {
         opacity: 0,
-        delay: 2,
+        delay: 1,
         y: 100,
-        ease: 'back',
-        duration: 1.25,
-        stagger: 0.5,
+        ease: 'power2.inOut',
+        // duration: 1.25,
+        stagger: 0.35,
       })
 
       // scroll animation
@@ -75,19 +89,29 @@ const Hero = () => {
           </div>
           <div className="absolute rounded-full bg-[#1e2a2e] bg-opacity-50 overflow-hidden w-[225px] h-[225px] animated-circle"></div>
         </div>
+
         <div className="xl:w-[50%] w-screen text-center">
-          <div className="hero-text-intro-container">
-            <h2 className="text-2xl mb-3 hero-text-hello">Hello. I'm</h2>
-            <h1 className="text-6xl hero-text-name">Mario Garcia.</h1>
-            <h2 className="text-2xl mt-5 hero-text-jobtitle">
-              A Frontend Software Engineer.
-            </h2>
+          <div className="hero-text-intro-container-wrapper opacity-0">
+            <div className="hero-text-intro-container">
+              <h2 className="text-2xl mb-3 hero-text-hello">Hello. I'm</h2>
+              <h1 className="text-6xl hero-text-name">Mario Garcia.</h1>
+              <h2 className="text-2xl mt-5 hero-text-jobtitle">
+                A Frontend Software Engineer.
+              </h2>
+            </div>
           </div>
+
           <div className="my-8 h-2 border-t-2 w-[15%] border-divider-1 m-auto" />
-          <p className="text-brown-5 text-xl xl:w-[65%] m-auto hero-text-description">
-            An engineer passionate about building accessible and user friendly
-            web applications and web sites.{' '}
-          </p>
+
+          <div className="hero-text-description-container-wrapper opacity-0">
+            <div className="hero-text-description-container">
+              <p className="text-brown-5 text-xl xl:w-[65%] m-auto hero-text-description">
+                An engineer passionate about building accessible and user
+                friendly web applications and web sites.{' '}
+              </p>
+            </div>
+          </div>
+
           <div className="flex-center mt-10">
             <div className="p-2 w-auto transform animate-bounce border-2 border-brown-1 rounded-full">
               <Image
