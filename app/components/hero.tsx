@@ -8,7 +8,7 @@ import { SplitText } from 'gsap/dist/SplitText'
 import Image from 'next/image'
 
 const Hero = () => {
-  const containerRef = useRef<HTMLElement>()
+  const containerRef = useRef<HTMLElement>(null)
 
   useGSAP(
     () => {
